@@ -1,5 +1,6 @@
 from contextlib import suppress
 from getpass import getpass
+
 from pyotp import TOTP
 
 
