@@ -1,4 +1,3 @@
-from contextlib import suppress
 from getpass import getpass
 
 from pyotp import TOTP
@@ -11,5 +10,7 @@ def main():
 
 
 if __name__ == '__main__':
-    with suppress(KeyboardInterrupt):
+    try:
         exit(main())
+    except KeyboardInterrupt:
+        raise SystemExit(130)
